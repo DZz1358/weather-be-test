@@ -53,23 +53,15 @@ const getForecast = async () => {
 const initCli = () => {
     const args = getArgs(process.argv);
 
-    // Object.entries(process.env).forEach(([key, value]) => {
-    //     console.log(`${chalk.green(key)}: ${chalk.blue(value)}`);
-    // });
-
-
     if (args.h) {
         printHelp();
+    } else if (args.s) {
+        saveCity(args.s);
+    } else if (args.t) {
+        saveToken(args.t);
+    } else {
+        getForecast();
     }
-    if (args.s) {
-        return saveCity(args.s);
-    }
-    if (args.t) {
-        return saveToken(args.t);
-    }
-
-    getForecast()
-    // getWeather('konotop')
 
 };
 

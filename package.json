@@ -1,6 +1,6 @@
 {
   "name": "denza1358",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "",
   "main": "weather.js",
   "bin": {
@@ -9,9 +9,11 @@
   "type": "module",
   "scripts": {
     "start": "node weather.js",
+    "city": "node weather.js -- -s",
+    "help": "node weather.js -- -h",
+    "token": "node weather.js -- -t",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
